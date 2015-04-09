@@ -6,7 +6,7 @@
  */
 //init dir
 header('Content-Type: application/json;charset=utf-8');
-$path = __DIR__ . '/uploads';
+$path = '/home/vcap/fs/0810f838fdab5b3';
 if (!is_dir($path))
     mkdir($path, 666);
 

@@ -11,7 +11,7 @@
         }
     </style>
 </head>
-<body>
+<body ng-controller="MainCtrl">
 <div style="width: 400px">
     <angular-upload action="upload.php" name="file" accept="image/*" multiple="true" ng-model="files"></angular-upload>
 </div>
@@ -22,7 +22,11 @@
         "use strict";
         angular.module('app', [
             'xl-angular-upload'
-        ]);
+        ]).controller('MainCtrl', ['$scope', function ($scope) {
+            $scope.$watch('files', function (n, o) {
+                console.log(n);
+            });
+        }]);
     })();
 </script>
 </body>
