@@ -1,5 +1,5 @@
 # xl-angular-upload
-amgularjs 上传directive
+angularjs 上传directive，支持多文件上传，支持上传进度
 # LICENSE
 MIT LICENSE
 # AUTHOR
