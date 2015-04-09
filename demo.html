@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngularToggle</title>
+    <link rel="stylesheet" href="angular-upload.css"/>
+    <style>
+        * {
+            font-family: Consolas, "Microsoft Yahei", arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 400px">
+    <angular-upload action="upload.php" name="file" accept="image/*" multiple="true" ng-model="files"></angular-upload>
+</div>
+<script src="vendor/angularjs/angular.js"></script>
+<script src="angular-upload.js"></script>
+<script>
+    (function () {
+        "use strict";
+        angular.module('app', [
+            'xl-angular-upload'
+        ]);
+    })();
+</script>
+</body>
+</html>

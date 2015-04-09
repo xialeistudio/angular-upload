@@ -1,0 +1,89 @@
+.xl-angular-upload {
+  .xl-btn {
+    color: #666;
+    background-color: #EEE;
+    border-color: #EEE;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: "Consolas", "Microsoft YaHei", Arial, arial, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 40px;
+    margin: 0;
+    display: inline-block;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    position: relative;
+    &.btn-primary {
+      background-color: #7B72E9;
+      border-color: #7B72E9;
+      color: #FFF;
+      &:hover {
+        background-color: #a49ef0;
+        border-color: #a49ef0;
+        color: #FFF;
+      }
+    }
+    input[type="file"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+  }
+}
+
+.queue {
+  width: 100%;
+  .item {
+    margin-top: 4px;
+    & > .info {
+      .no {
+        float: left;
+        width: 10%;
+        text-align: center;
+      }
+      .name {
+        float: left;
+        width: 70%;
+      }
+      .size {
+        float: right;
+        width: 20%;
+      }
+      &:after {
+        content: ' ';
+        display: block;
+        clear: both;
+      }
+    }
+    & > .process-bar {
+      width: 100%;
+      height: 4px;
+      margin-top: 4px;
+      .process {
+        transition: all .2s;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        height: 100%;
+        width: 0;
+        background: #7B72E9;
+      }
+    }
+  }
+}
