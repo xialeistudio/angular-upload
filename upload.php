@@ -21,6 +21,12 @@ if (!is_uploaded_file($file['tmp_name'])) {
     ]);
     exit;
 }
+if($file['size']>200*1024){
+    echo json_encode([
+        'error'=>'上传文件不能大于2M'
+    ]);
+    exit;
+}
 if (!move_uploaded_file($file['tmp_name'], $savePath)) {
     echo json_encode([
         'error' => '上传失败'
